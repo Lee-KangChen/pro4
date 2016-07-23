@@ -5261,3 +5261,13 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
   Rendered posts/index.html.erb within layouts/application (3.3ms)
 Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js" for ::1 at 2016-07-23 15:21:09 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/application.js" for ::1 at 2016-07-23 15:21:18 +0800
+
+
+Started GET "/assets/application.css" for ::1 at 2016-07-23 15:21:21 +0800
