@@ -1,0 +1,24 @@
+<h1>User List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<% %>
+  <tbody>
+<!-- 為何原本browers出不來？因為檔名後面多了一個空格 -->
+  <!-- 1,%表ruby語法；2,%後面的= 是表示browser是否將之顯示出來。3,@users是去users_controller.rb裡捉「@users = User.all」的@users；@users = User.all表示將資料庫中User table all傳給變數@users -->
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.age %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
