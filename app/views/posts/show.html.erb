@@ -1,0 +1,66 @@
+<%= render 'shared/title', title: "#{@post.title}"%>
+<!-- added show action and view in posts controller/7  app/views/posts/show.html.erb-->
+<!--beautify the html files a bit/ 21  app/views/posts/show.html.erb-->
+<div class="row">
+	<div class="col-md-8 well">
+  <h4>category:
+    <%= render partial: "categories/category", collection: @post.categories %></h4>
+		<h3><%= @post.title %></h3>
+		<p>
+	 		<%= @post.content %>
+	 	</p>
+    <br>
+    <small>posted by </small><%= @post.user.name %>
+ 	</div>
+</div>
+<!--added container css class, clean up the code a bit/36  app/views/posts/show.html.erb-->
+<h4>All Comments:</h4>
+<% @post.comments.each do |comment|%>
+	<div class="row">
+
+    <div class='col-md-1 well text-center'>
+      <% if logged_in? %>
+        <%= link_to vote_post_comment_path(@post, comment, vote: true), class: "btn btn-primary", method: 'post' do %>
+          Like
+        <% end %>
+      <% end %>
+      <br/>
+      <%= comment.total_votes %> Votes
+      <br/>
+      <% if logged_in? %>
+        <%= link_to vote_post_comment_path(@post, comment, vote: false), class: "btn btn-danger", method: 'post' do %>
+          Dislike
+        <% end %>
+      <% end %>
+    </div>
+
+ 		<div class="col-md-6 well">
+ 	  	<p>
+ 	   	 <%= comment.content%>
+ 	 	 	</p>
+      <br>
+      <small>commented by </small><%= "#{comment.user.name}" %>
+ 	 	 </div>
+ 	</div>
+<% end %>
+<!--added comment form in post show page/16  app/views/posts/show.html.erb-->
+<% if logged_in? %><!--added logout path and login display conditions-->
+
+  <h4>Leave a comment:</h4>
+  <%= form_for [@post, @comment] do |f| %>
+    <div class="row">
+      <%= f.text_area :content, rows: 3, class: 'col-md-4' %>
+      <div class="col-md-2">
+        <%= f.submit 'Create Comment', class: 'btn btn-primary' %>
+      </div>
+    </div>
+    <br>
+    <% end %>
+
+<% end %>
+  		  
+<hr>
+
+<div class="row">
+	<%= link_to 'go back to all posts', posts_path %>
+</div>

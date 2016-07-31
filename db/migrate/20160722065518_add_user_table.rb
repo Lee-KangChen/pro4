@@ -2,16 +2,16 @@ class AddUserTable < ActiveRecord::Migration
 # posts新增t.string :title；把connections的comment_id改為post_id
 # 執行 $rake db:migrate 後SQLite有了
 def change
- 		create_table :users do |t|	# 用來記錄使用者的資料:一對多post,comment
+ 	create_table :users do |t|	# 用來記錄使用者的資料:一對多post,comment
  			# 命名規則？首字大小寫，要加S
     	t.string :name
     	t.string :phone
-  	  t.integer :age
+  	    t.integer :age
     	t.timestamps null: false	# 每個都要？yes
     end	# 每一個create_table都要有個end
  		# 空行才好分辨
 
- 		create_table :posts do |t| # 用來記錄貼文的資料,1對多 comment
+ 	create_table :posts do |t| # 用來記錄貼文的資料,1對多 comment
     	t.string :user_id
     	t.string :content
     	t.string :title

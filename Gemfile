@@ -1,4 +1,11 @@
 source 'https://rubygems.org'
+gem 'vote_gem', '~> 0.0.1'
+# include bootstrap gem into our project / 2  Gemfile
+gem 'sass-rails', '~> 5.0' # add this line
+# chenligangde-MacBook-Air:pro4 Lee-KangChen$ bundle show '~> 5.0'
+# Could not find gem '~> 5.0'.
+gem 'bcrypt', '~> 3.1.7'
+gem 'pry'
 gem 'awesome_print'
 gem 'bootstrap-sass'
 
@@ -35,18 +42,21 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem 'sqlite3' #加這行
-end
+# clean up the gem file
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'sqlite3'
+  gem 'pry'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'sqlite3'
+  gem 'byebug'
 end
 
 # 再加這一段
