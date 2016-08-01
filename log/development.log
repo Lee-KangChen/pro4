@@ -10439,3 +10439,195 @@ SQLite3::SQLException: no such column: john: SELECT "users".* FROM "users" WHERE
   [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
   [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."name" = 'bob' AND "users"."id" != 1) LIMIT 1
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2016-08-01 20:54:35 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mVote Load (3.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 1], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 1], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 2], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 2], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 3], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 3], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 4], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 4], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 5], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 5], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 6], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 6], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_title.html.erb (0.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 6], ["voteable_type", "Post"], ["vote", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 6], ["voteable_type", "Post"], ["vote", false]]
+  [1m[36mCategory Load (2.7ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?[0m  [["post_id", "6"]]
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered posts/_post.html.erb (82.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 5], ["voteable_type", "Post"], ["vote", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 5], ["voteable_type", "Post"], ["vote", false]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?  [["post_id", "5"]]
+  Rendered categories/_category.html.erb (0.6ms)
+  Rendered categories/_category.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (11.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 2], ["voteable_type", "Post"], ["vote", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 2], ["voteable_type", "Post"], ["vote", false]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?[0m  [["post_id", "2"]]
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered posts/_post.html.erb (8.6ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 3], ["voteable_type", "Post"], ["vote", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 3], ["voteable_type", "Post"], ["vote", false]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?  [["post_id", "3"]]
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered posts/_post.html.erb (11.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 1], ["voteable_type", "Post"], ["vote", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 1], ["voteable_type", "Post"], ["vote", false]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?[0m  [["post_id", "1"]]
+  Rendered categories/_category.html.erb (0.1ms)
+  Rendered categories/_category.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (10.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 4], ["voteable_type", "Post"], ["vote", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 4], ["voteable_type", "Post"], ["vote", false]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?  [["post_id", "4"]]
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered posts/_post.html.erb (5.6ms)
+  Rendered posts/index.html.erb within layouts/application (164.5ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 7174ms (Views: 7003.6ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/assets/application.self-9106b2feec7db958ad64cf56606cb12d28e9d535b02f7c100a2685b6858668f2.css?body=1" for ::1 at 2016-08-01 20:54:43 +0800
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-01 20:54:43 +0800
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-08-01 20:54:43 +0800
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-01 20:54:43 +0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-01 20:54:43 +0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-08-01 20:54:43 +0800
+
+
+Started POST "/posts/6/vote?vote=true" for ::1 at 2016-08-01 20:54:50 +0800
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"5PKh3EHUY7RFNovKD+4to4EaavOyr45qxd3Cv7D2OF7ZFCbgynips92PIIlJzFrd+2vn281EwtlPoyOExPPHKQ==", "vote"=>"true", "id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVote Exists (0.3ms)[0m  SELECT  1 AS one FROM "votes" WHERE ("votes"."user_id" = 8 AND "votes"."voteable_type" = 'Post' AND "votes"."voteable_id" = 6) LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["voteable_id", 6], ["voteable_type", "Post"], ["user_id", 8], ["vote", "t"], ["created_at", "2016-08-01 12:54:50.679201"], ["updated_at", "2016-08-01 12:54:50.679201"]]
+SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.2ms)
+
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)):
+  app/controllers/posts_controller.rb:47:in `vote'
+
+
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (111.1ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (228.2ms)
+
+
+Started POST "/posts/6/vote?vote=false" for ::1 at 2016-08-01 20:54:56 +0800
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"5PKh3EHUY7RFNovKD+4to4EaavOyr45qxd3Cv7D2OF7ZFCbgynips92PIIlJzFrd+2vn281EwtlPoyOExPPHKQ==", "vote"=>"false", "id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVote Exists (0.1ms)[0m  SELECT  1 AS one FROM "votes" WHERE ("votes"."user_id" = 8 AND "votes"."voteable_type" = 'Post' AND "votes"."voteable_id" = 6) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["voteable_id", 6], ["voteable_type", "Post"], ["user_id", 8], ["vote", "f"], ["created_at", "2016-08-01 12:54:56.047421"], ["updated_at", "2016-08-01 12:54:56.047421"]]
+SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.3ms)
+
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)):
+  app/controllers/posts_controller.rb:47:in `vote'
+
+
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.9ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-08-01 20:55:14 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mComment Load (14.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", "6"]]
+  Rendered shared/_title.html.erb (0.1ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?[0m  [["post_id", "6"]]
+  Rendered categories/_category.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered posts/show.html.erb within layouts/application (46.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 148ms (Views: 111.1ms | ActiveRecord: 15.5ms)
+
+
+Started POST "/posts/6/vote?vote=true" for ::1 at 2016-08-01 20:55:17 +0800
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"5PKh3EHUY7RFNovKD+4to4EaavOyr45qxd3Cv7D2OF7ZFCbgynips92PIIlJzFrd+2vn281EwtlPoyOExPPHKQ==", "vote"=>"true", "id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVote Exists (0.1ms)[0m  SELECT  1 AS one FROM "votes" WHERE ("votes"."user_id" = 8 AND "votes"."voteable_type" = 'Post' AND "votes"."voteable_id" = 6) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["voteable_id", 6], ["voteable_type", "Post"], ["user_id", 8], ["vote", "t"], ["created_at", "2016-08-01 12:55:17.355353"], ["updated_at", "2016-08-01 12:55:17.355353"]]
+SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms)
+
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)):
+  app/controllers/posts_controller.rb:47:in `vote'
+
+
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (87.0ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (187.7ms)
