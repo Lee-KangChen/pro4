@@ -85,7 +85,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
-    pg (0.18.4)
+    pg (0.15.1)
     pkg-config (1.1.7)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -174,7 +174,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  pg
+  pg (= 0.15.1)
   pry
   rails (= 4.2.4)
   rails_12factor

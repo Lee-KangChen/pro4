@@ -10236,3 +10236,206 @@ Processing by PostsController#index as HTML
   Rendered layouts/_navigation.html.erb (0.4ms)
   Rendered layouts/_messages.html.erb (0.2ms)
 Completed 200 OK in 144ms (Views: 102.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-31 21:55:57 +0800
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mVote Load (0.9ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 1], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 1], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 2], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 2], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 3], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 3], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 4], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 4], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 5], ["voteable_type", "Post"], ["vote", "t"]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 5], ["voteable_type", "Post"], ["vote", "f"]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_title.html.erb (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 5], ["voteable_type", "Post"], ["vote", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 5], ["voteable_type", "Post"], ["vote", false]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?[0m  [["post_id", "5"]]
+  Rendered categories/_category.html.erb (0.6ms)
+  Rendered categories/_category.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (18.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 1], ["voteable_type", "Post"], ["vote", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 1], ["voteable_type", "Post"], ["vote", false]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?  [["post_id", "1"]]
+  Rendered categories/_category.html.erb (0.2ms)
+  Rendered categories/_category.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (20.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 2], ["voteable_type", "Post"], ["vote", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 2], ["voteable_type", "Post"], ["vote", false]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?[0m  [["post_id", "2"]]
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered posts/_post.html.erb (10.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 3], ["voteable_type", "Post"], ["vote", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 3], ["voteable_type", "Post"], ["vote", false]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?  [["post_id", "3"]]
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered posts/_post.html.erb (9.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?[0m  [["voteable_id", 4], ["voteable_type", "Post"], ["vote", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = ?  [["voteable_id", 4], ["voteable_type", "Post"], ["vote", false]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "connections" ON "categories"."id" = "connections"."category_id" WHERE "connections"."post_id" = ?[0m  [["post_id", "4"]]
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered categories/_category.html.erb (0.0ms)
+  Rendered posts/_post.html.erb (9.7ms)
+  Rendered posts/index.html.erb within layouts/application (89.8ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 266ms (Views: 205.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-31 21:55:58 +0800
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-31 21:55:58 +0800
+
+
+Started GET "/assets/application.self-c125f862f1943f9d7ca4f50e8eb3674b7513f66493d8f5e43ec98eb20278ea26.css?body=1" for ::1 at 2016-07-31 21:55:58 +0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-07-31 21:55:58 +0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-31 21:55:58 +0800
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2016-07-31 21:55:58 +0800
+
+
+Started POST "/posts/5/vote?vote=true" for ::1 at 2016-07-31 21:56:13 +0800
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"NM9aPbtUIratJ4dJDL0en4HetQHVlr0L7eBuKrXrNrAJKd0BMPjosTWeLApKn2nh+684Kap98bhnno8Rwe7Jxw==", "vote"=>"true", "id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mVote Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "votes" WHERE ("votes"."user_id" = 8 AND "votes"."voteable_type" = 'Post' AND "votes"."voteable_id" = 5) LIMIT 1[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["voteable_id", 5], ["voteable_type", "Post"], ["user_id", 8], ["vote", "t"], ["created_at", "2016-07-31 13:56:13.594392"], ["updated_at", "2016-07-31 13:56:13.594392"]]
+SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 3.7ms)
+
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)):
+  app/controllers/posts_controller.rb:47:in `vote'
+
+
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.0ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (104.9ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (227.0ms)
+
+
+Started POST "/posts/5/vote?vote=false" for ::1 at 2016-07-31 21:56:36 +0800
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"NM9aPbtUIratJ4dJDL0en4HetQHVlr0L7eBuKrXrNrAJKd0BMPjosTWeLApKn2nh+684Kap98bhnno8Rwe7Jxw==", "vote"=>"false", "id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVote Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "votes" WHERE ("votes"."user_id" = 8 AND "votes"."voteable_type" = 'Post' AND "votes"."voteable_id" = 5) LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["voteable_id", 5], ["voteable_type", "Post"], ["user_id", 8], ["vote", "f"], ["created_at", "2016-07-31 13:56:36.650461"], ["updated_at", "2016-07-31 13:56:36.650461"]]
+SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.8ms)
+
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: INSERT INTO "votes" ("voteable_id", "voteable_type", "user_id", "vote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)):
+  app/controllers/posts_controller.rb:47:in `vote'
+
+
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.2ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (101.5ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/Lee-KangChen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (227.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO "posts" ("user_id", "content", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user_id", "1"], ["content", "I post,so I am here"], ["title", "I post"], ["created_at", "2016-08-01 11:07:57.077080"], ["updated_at", "2016-08-01 11:07:57.077080"]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT 1[0m  [["name", "bob"]]
+  [1m[35mUser Load (3.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT 1  [["name", "bob"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT 1[0m  [["name", "bob"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", nil]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "bob"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (4)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (4)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (4)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (4)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE (john)
+SQLite3::SQLException: no such column: john: SELECT "users".* FROM "users" WHERE (john)
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (john)[0m
+SQLite3::SQLException: no such column: john: SELECT "users".* FROM "users" WHERE (john)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = ?  [["name", "john"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "john"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = ?  [["name", "bob"]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "John"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ?  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ?  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."name" = 'Dave' AND "users"."id" != 4) LIMIT 1[0m
+  [1m[35mSQL (2.5ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", "Dave"], ["updated_at", "2016-08-01 11:28:39.527864"], ["id", 4]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."name" = 'Tom' AND "users"."id" != 3) LIMIT 1
+  [1m[36mSQL (2.5ms)[0m  [1mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Tom"], ["updated_at", "2016-08-01 11:30:07.790006"], ["id", 3]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."name" = 'Tom' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mSQL (2.7ms)[0m  UPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["password_digest", "12345"], ["updated_at", "2016-08-01 11:32:51.223279"], ["id", 3]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."name" = 'bob' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (3.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."name" = 'bob' AND "users"."id" != 2) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."name" = 'Dave' AND "users"."id" != 4) LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "12345"], ["updated_at", "2016-08-01 11:33:33.412438"], ["id", 4]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."name" = 'Billy' AND "users"."id" != 5) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["password_digest", "12345"], ["updated_at", "2016-08-01 11:33:41.789461"], ["id", 5]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."name" = 'bob' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."age" = ? LIMIT 1  [["age", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."name" = 'bob' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
